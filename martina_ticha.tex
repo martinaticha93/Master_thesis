@@ -1,0 +1,105 @@
+\documentclass{ctuthesis}
+
+\usepackage{wrapfig}
+\usepackage{array,multirow}
+\usepackage{subcaption}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{svg}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{cleveref}
+\usepackage{dirtree}
+\usepackage{enumitem}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\renewcommand{\cref}[1]{\Cref{#1}}
+\renewcommand{\crefrange}[1]{\Crefrange{#1}}
+
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+
+\ctusetup{
+    xdoctype = M,
+    xfaculty = F3,
+    mainlanguage = english,
+    titlelanguage = english,
+    title-english = {Long-term person re-identification in video},
+    title-czech = {Transfer learning pro klasifikaci textu},
+    department-english = {Department of Cybernetics},
+    author = {Martina Tichá},
+    supervisor = {Ing. Jiří Čermák, Ph.D.},
+    supervisor-address = {Blindspot Solutions, Praha},
+    fieldofstudy-english = {Open Informatics},
+	subfieldofstudy-english = {Computer vision and digital image processing},
+	day = 24,
+    month = 5,
+    year = 2019,
+    specification-file = {zadani.pdf}, 
+    front-specification = true,
+	keywords-czech = {zpracování přirozeného jazyka, klasifikace textu, umělá neuronová síť, strojové učení},
+	keywords-english = {natural language processing, text classification, artificial neural network, machine learning, transfer learning}
+}
+
+\ctuprocess
+
+\begin{abstract-english}
+The recent developments of Language Modeling led to advances in transfer learning methods in Natural Language Processing. Language Models pretrained on large general datasets achieved state-of-the-art results in a wide range of tasks. The \textit{Universal Language Model Fine-tuning} represents an effective transfer learning method for text classification. The goal of this thesis is to further test the robustness of this method in scenarios, commonly found in real-world applications. 
+
+\end{abstract-english}
+
+\begin{abstract-czech}
+Nedávné vývoje v jazykových modelech vedly k posunu v transfer learning metodách ve zpracování přirozeného jazyka. Jazykové modely předtrénované na rozsáhlých obecných datasetech dosahují nejlepších výsledků v celé řadě úkolů. \textit{Universal Language Model Fine-tuning} představuje efektivní transfer learning metodu pro klasifikaci texu. Cílem této práce je hlouběji otestovat robustnost této metody ve scénářích, které se běžně nacházejí při reálných aplikacích.
+\end{abstract-czech}
+
+\begin{thanks}
+Most of all, I would like to thank my supervisor, Jiří Čermák, who guided me throughout writing this thesis as well as to Štěpán Kopřiva and all the great people at Blindspot.ai.
+
+I am grateful to all my friends and family: my parents and grandparents, my sister, and my wonderful girlfriend for always supporting me.
+
+Finally, I want to thank the following coffee roasters, which provided  me with the much-needed fuel: Pražírna, doubleshot, KK, Dos Mundos, and Coffee Source.
+\end{thanks}
+
+
+\begin{declaration}
+I declare that the presented work was developed independently and that I have listed all sources of information used within it in accordance with the methodical instructions for observing the ethical principles in the preparation of the university theses.
+\\
+\\
+\\
+\makebox[0.8\columnwidth]{\dotfill}
+\\
+Pavel Janata \\
+Prague, \ctufield{day}th~\monthinlanguage{title}~\ctufield{year}
+\end{declaration}
+
+
+\begin{document}
+
+\maketitle
+
+\input{chapters/1_introduction}
+\input{chapters/2_related_works.tex}
+\input{chapters/3_technical_background.tex}
+\input{chapters/4_gait_recognition.tex}
+\input{chapters/5_data_sets.tex}
+\input{chapters/6_proposed_solutions.tex}
+\input{chapters/7_results.tex}
+\input{chapters/8_future_work.tex}
+\input{chapters/9_conclusion.tex}
+% \input{chapters/10_appendices.tex}
+
+\appendix
+
+
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+
+\end{document}

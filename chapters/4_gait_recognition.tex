@@ -1,0 +1,42 @@
+\chapter{Gait as a biometrics} \label{ch:gait_recognition}
+In this chapter, we provide an overview of body measurements, that can be used for a person-identification. In particular, we discuss the usage of the gait as a mean of identification and describe the families of methods for gait recognition. This chapter was inspired by \cite{gafurov2007survey}.
+ 
+\section{Biometrics}
+The term Biometric refers to a metric related to some human characteristics (biometric identifier). The biometric identifiers can be divided into two groups:
+\begin{itemize}
+    \item Physiological identifiers (e.g., fingerprints, palm veins, DNA, iris...)
+    \item Behavioral identifiers (e.g., voice, gait, typing rhythm...)
+\end{itemize}
+\bigbreak
+There are many human traits, that can be used for the biometric identification. Jain et al. \cite{biometrics} described seven factors that should be considered when selecting a particular biometric to be used in a specific situation:
+\begin{itemize}
+    \item \textit{Universality} - every person possess this characteristic
+    \item \textit{Uniqueness} - the characteristic is unique for each person
+    \item \textit{Permanence} - the trait does not vary over time
+    \item \textit{Measurability} - the measurements are easy to obtain
+    \item \textit{Performance} - relates to the accuracy, speed, and robustness of the technology used 
+    \item \textit{Acceptability} - the technique is accepted well by the individuals of the relevant population such that they are willing to have their biometric trait captured
+    \item \textit{Circumvention} - the trait cannot be easily imitated
+\end{itemize}
+\bigbreak
+Currently, the most popular biometric-based person identification methods are based on iris recognition, face recognition, and fingerprints recognition. These methods are, in general, very accurate, fast, and robust. However, their main disadvantage is that they either require physical contact (fingerprint scanning) or at least a cooperation of the subject (photo shooting from a short distance and a suitable angle for iris or face recognition). 
+
+Gait, as a human trait, does not have these constraints and can easily be observed even from a distance. The studies in psychophysics \cite{friend_by_gait} show that humans can recognize people by the way they walk, which indicates the presence of identity information in their gait. According to a medical study from the year 1967 \cite{gait_total_pattern}, there are 24 different components of a human gait, and if all of them are considered, gait is unique for each person. For these reasons, the usage of gait to distinguish people is nowadays an attractive topic among researchers. 
+
+\section{Approaches to Gait Recognition}
+Based on how the information about the individual's gait is obtained, gait recognition methods can be divided into three categories.
+\subsection{Wearable sensor-based gait recognition}
+In the Wearable sensors-based gait recognition methods, the gait information is collected using body-worn motion recording sensors. The sensors can be fastened at different locations on the human body and can hence measure various metrics such as speed, movement frequency, the maximal and minimal distance between specific body part, etc. These methods can be, depending on the sensors, very precise in capturing the human body movements. The apparent main disadvantage, on the other hand, is the need of the sensors to be fastened onto bodies of the observed identities.
+\subsection{Floor sensor-based gait recognition}
+In the case of the Floor sensor-based gait recognition methods, a set of sensors is installed on the floor. These sensors enable to measure gait features such as stride length, stride cadence, or time on toe vs. time on heel ratio when a person walks on the floor. The main advantage of this method is that it does not need any cooperation from the side of the observed identities. The sensors can be installed in front of the doors of buildings and provide information about the gait of people who want to enter. On the other hand, sensors located on the floor can hardly monitor other body parts than legs and feet, and the person identification is then carried out on incomplete data.
+\subsection{Machine vision-based gait recognition}
+In the machine vision-based gait recognition methods, the gait is captured by a video-camera from a distance. Various processing techniques are then applied to the videos to extract gait features for recognition purpose. The main advantage of this method is that the only necessary device that needs to be installed to collect the information about the target people is a surveillance camera, which is nowadays common equipment in most of the public places. The disadvantage of this method is its computational complexity as the processing of video sequences is, in general, significantly more computationally demanding than processing signals from sensors from the previous two methods. However, thanks to the increasing power of technologies, this obstacle is becoming less and less significant, and the machine vision-based gait recognition methods are believed to have significant potential in the field of the person recognition.
+
+\section{Challenges}
+Several factors may have a negative influence on the accuracy of gait recognition methods. We can divide them into two groups.
+\begin{itemize}
+    \item \textit{Internal factors}. These factors change the natural gait due to some physiological changes in the body such as pregnancy, sickness, injury, gaining or losing weight, drunkenness, aging and so on. 
+    \item \textit{External factors}. These factors either impose challenges to the recognition algorithm (e.g., insufficient lighting conditions, varying viewing angles or indoor vs outdoor environments) or temporary change the natural gait such as walking surface conditions (grass vs concrete, dry vs slippery floor, etc.), type of shoes (mountain shoes vs dancing shoes), objects carrying (e.g., backpack, suitcase, etc.) and so on.
+\end{itemize}
+\bigbreak
+Due to all these factors that need to be considered and managed in order to build a robust gait recognition system, for the time being, gait cannot be considered as a replacement for traditional person identification mechanisms like fingerprints or iris-based person identification. However, there are known cases where gait analysis was used as evidence in criminal investigations. One example is the investigation of an armed robbery in 2000 in the UK \cite{forensic_gait_analys}.

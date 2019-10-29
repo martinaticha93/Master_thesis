@@ -1,0 +1,34 @@
+SequentialRNN(
+  (0): RNN_Encoder(
+    (encoder): Embedding(30002, 400, padding_idx=1)
+    (encoder_with_dropout): EmbeddingDropout(
+      (embed): Embedding(30002, 400, padding_idx=1)
+    )
+    (rnns): ModuleList(
+      (0): WeightDrop(
+        (module): LSTM(400, 1150, dropout=0.15)
+      )
+      (1): WeightDrop(
+        (module): LSTM(1150, 1150, dropout=0.15)
+      )
+      (2): WeightDrop(
+        (module): LSTM(1150, 400, dropout=0.15)
+      )
+    )
+    (dropouti): LockedDropout(
+    )
+    (dropouths): ModuleList(
+      (0): LockedDropout(
+      )
+      (1): LockedDropout(
+      )
+      (2): LockedDropout(
+      )
+    )
+  )
+  (1): LinearDecoder(
+    (decoder): Linear(in_features=400, out_features=30002, bias=False)
+    (dropout): LockedDropout(
+    )
+  )
+)

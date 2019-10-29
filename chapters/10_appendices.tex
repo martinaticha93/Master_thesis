@@ -1,0 +1,150 @@
+
+
+\chapter{Detailed results of the experiments} \label{app:exp_res}
+
+The following tables contain more complete results of the experiments described in \cref{ch:exp}.
+
+\begin{table}[h]
+\begin{tabular}{r||c|c|c|c|c}
+\toprule
+& \multicolumn{5}{c}{Relative amounts of training data} \\
+&          1 &       0.75 &        0.5 &       0.25 &      0.125 \\
+\midrule
+0   &  87.160835 &  87.914632 &  85.092499 &  80.308195 &  69.227414 \\
+1   &  88.223817 &  87.523094 &  86.423896 &  80.806657 &  71.161864 \\
+2   &  87.807642 &  86.651873 &  86.996770 &  83.227470 &  71.298274 \\
+3   &  88.207577 &  88.134526 &  86.752232 &  79.188221 &  72.445672 \\
+4   &  87.947029 &  88.178198 &  86.602650 &  80.259772 &  70.791102 \\
+\midrule
+5   &  87.938089 &  87.058472 &  83.267818 &  82.513815 &  68.779007 \\
+6   &  88.187609 &  87.406726 &  87.131258 &  80.458106 &  73.018356 \\
+7   &  88.056997 &  88.213705 &  87.196342 &  79.690593 &  66.413281 \\
+8   &  87.692025 &  88.361035 &  86.544611 &  80.874767 &  70.388140 \\
+9   &  88.000813 &  87.304882 &  86.577849 &  81.171910 &  65.811565 \\
+\hline
+\textbf{avg} &  87.922243 &  87.674714 &  86.258593 &  80.849951 &  69.933468 \\
+\hline
+\textbf{std} &   0.302300 &   0.542363 &   1.142954 &   1.158793 &   2.266158 \\
+\bottomrule
+\end{tabular}
+
+\caption[All measured accuracies using supervised ULMFiT]{Accuracies measured in the experiment described in \cref{sec:expt1}}
+\label{tab:exp1_complete}
+\end{table}
+
+
+\begin{table}[h]
+\begin{tabular}{r||c|c|c|c|c}
+\toprule
+& \multicolumn{5}{c}{Relative amounts of training data} \\
+&          1 &       0.75 &        0.5 &       0.25 &      0.125 \\
+\midrule
+0   &  87.160835 &  87.383913 &  85.794978 &  83.668693 &  81.707504 \\
+1   &  88.223817 &  87.916595 &  86.762542 &  85.688351 &  80.610170 \\
+2   &  87.807642 &  87.178675 &  86.570723 &  84.768064 &  80.977576 \\
+3   &  88.207577 &  87.462209 &  87.182601 &  83.416468 &  82.076774 \\
+4   &  87.947029 &  87.265326 &  86.869639 &  85.731833 &  80.338175 \\
+\midrule
+5   &  87.938089 &  87.383855 &  87.165173 &  84.760113 &  81.144016 \\
+6   &  88.187609 &  87.307489 &  86.673243 &  83.840033 &  82.111950 \\
+7   &  88.056997 &  88.248552 &  87.508883 &  84.917638 &  80.923438 \\
+8   &  87.692025 &  87.362567 &  86.841745 &  85.943018 &  83.100916 \\
+9   &  88.000813 &  86.971771 &  87.763805 &  84.733168 &  82.226157 \\
+\hline
+\textbf{avg} &  87.922243 &  87.448095 &  86.913333 &  84.746738 &  81.521668 \\
+\hline
+\textbf{std} &   0.302300 &   0.350518 &   0.516665 &   0.840956 &   0.819113 \\
+\bottomrule
+\end{tabular}
+
+\caption[All measured accuracies using semi-supervised ULMFiT]{Accuracies measured in the experiment described in \cref{sec:expt2}}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{r||c|c|c|c|c}
+    \toprule
+    & \multicolumn{5}{c}{Relative amounts of training data} \\
+    Class &      1 &      0.75 &      0.5 &      0.25 &      0.125 \\
+    \midrule
+    \textbf{alt.atheism}            &  19.56 &  21.57 &  24.33 &  37.05 &  46.58 \\
+    comp.graphics            &  17.74 &  17.28 &  17.22 &  19.28 &  17.02 \\
+    comp.os.ms-windows.misc  &  23.05 &  22.89 &  22.39 &  21.78 &  20.00 \\
+    comp.sys.ibm.pc.hardware &  21.17 &  18.57 &  20.66 &  14.80 &  17.96 \\
+    \textbf{comp.sys.mac.hardware}    &  13.45 &  16.52 &  16.52 &  26.130 &  30.75 \\
+    \textbf{comp.windows.x  }         &  17.81 &  17.40 &  20.51 &  26.28 &  34.59 \\
+    \textbf{misc.forsale }            &   9.28 &  10.92 &  12.92 &  23.74 &  29.74 \\
+    rec.autos                &  10.68 &   9.06 &  11.59 &   8.41 &  11.19 \\
+    \textbf{rec.motorcycles }         &   4.72 &   6.98 &   6.83 &  10.20 &  15.27 \\
+    rec.sport.baseball       &   4.84 &   4.53 &   4.84 &   4.53 &   4.94 \\
+    \hline
+    rec.sport.hockey         &   1.80 &   2.01 &   1.80 &   1.95 &   2.41 \\
+    sci.crypt                &   7.12 &   6.01 &   6.26 &   5.51 &   6.41 \\
+    \textbf{sci.electronics}          &  19.03 &  18.02 &  22.39 &  31.55 &  37.86 \\
+    \textbf{sci.med}                  &   8.74 &  10.05 &  11.21 &  17.68 &  22.58 \\
+    \textbf{sci.space}                &   7.21 &   6.60 &   7.06 &  12.64 &  17.46 \\
+    \textbf{soc.religion.christian}   &   7.19 &   7.69 &   8.54 &  14.82 &  19.35 \\
+    \textbf{talk.politics.guns}       &  10.88 &  10.33 &  13.46 &  16.32 &  18.74 \\
+    talk.politics.mideast    &  11.91 &  13.94 &  11.65 &  12.02 &  11.06 \\
+    talk.politics.misc       &  38.77 &  37.55 &  37.10 &  36.57 &  37.75 \\
+    talk.religion.misc       &  27.57 &  23.98 &  28.05 &  21.99 &  23.51 \\
+    \bottomrule
+    \end{tabular}
+    \caption[Class errors with 10 classes unbalanced]{Average error per class with 10 classes unbalanced (in \textbf{bold}) as described in \cref{sec:expt3}.}
+\end{table}{}
+
+\begin{table}[h ]
+    \centering
+    \begin{tabular}{r||c|c|c|c|c}
+    \toprule
+    & \multicolumn{5}{c}{Relative amounts of training data} \\
+    Class &      1 &      0.75 &      0.5 &      0.25 &      0.125 \\
+    \midrule
+    alt.atheism              &  19.56 &  20.50 &  20.25 &  24.51 &  20.94 \\
+    comp.graphics            &  17.74 &  17.53 &  16.97 &  17.38 &  18.82 \\
+    comp.os.ms-windows.misc  &  23.05 &  23.60 &  23.25 &  28.78 &  24.98 \\
+    comp.sys.ibm.pc.hardware &  21.17 &  17.91 &  20.61 &  18.11 &  20.41 \\
+    comp.sys.mac.hardware    &  13.45 &  15.27 &  15.58 &  15.64 &  14.70 \\
+    \textbf{comp.windows.x  }         &  17.81 &  17.19 &  18.52 &  25.92 &  30.92 \\
+    misc.forsale             &   9.28 &   9.85 &   8.51 &   8.46 &   8.72 \\
+    rec.autos                &  10.68 &   8.71 &   9.11 &   9.52 &   9.72 \\
+    rec.motorcycles          &   4.72 &   4.77 &   6.33 &   5.38 &   5.43 \\
+    rec.sport.baseball       &   4.84 &   4.74 &   5.29 &   4.28 &   5.39 \\
+    \hline
+    rec.sport.hockey         &   1.80 &   1.55 &   1.70 &   1.90 &   1.65 \\
+    sci.crypt                &   7.12 &   5.91 &   5.91 &   5.30 &   6.46 \\
+    sci.electronics          &  19.03 &  18.12 &  17.71 &  16.69 &  15.27 \\
+    sci.med                  &   8.74 &  10.40 &   8.54 &   8.99 &   8.69 \\
+    sci.space                &   7.21 &   6.29 &   7.92 &   6.75 &   6.65 \\
+    \textbf{soc.religion.christian}   &   7.19 &   6.68 &   9.05 &  13.37 &  22.06 \\
+    talk.politics.guns       &  10.88 &  10.16 &   8.74 &   8.35 &   6.65 \\
+    talk.politics.mideast    &  11.91 &  12.23 &  11.91 &  11.06 &   9.89 \\
+    talk.politics.misc       &  38.77 &  37.42 &  36.97 &  39.61 &  39.61 \\
+    talk.religion.misc       &  27.57 &  25.98 &  25.42 &  24.06 &  27.17 \\
+    \bottomrule
+    \end{tabular}
+    \caption[Class errors with 10 classes unbalanced]{Average error per class with 2 classes unbalanced (in \textbf{bold}) as described in \cref{sec:expt4}.}
+\end{table}{}
+
+
+\chapter{Contents of the CD}
+
+
+
+\dirtree{%
+.1 /.
+.2 src.
+.3 model\_structure.
+.3 scripts.
+.3 fastai\_scripts.
+.3 fresh\_models.
+.3 notebooks\DTcomment{Jupyter notebooks used for data evaluation}.
+.3 experiments\DTcomment{Files generated during the experiments}.
+.4 exp1.
+.4 exp2.
+.4 exp3.
+.4 exp4.
+.2 thesis\DTcomment{\LaTeX  codes of this thesis}.
+.3 figures.
+.3 chapters.
+}
